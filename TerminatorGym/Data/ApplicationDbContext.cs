@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TerminatorGym.Models;
 
 namespace TerminatorGym.Data
 {
@@ -9,5 +10,7 @@ namespace TerminatorGym.Data
             : base(options)
         {
         }
+        public DbSet<TerminatorGym.Models.Miembro> Miembro { get; set; } = default!;
+        public DbSet<TerminatorGym.Models.Membresia> Membresia { get; set; } = default!;
     }
 }
